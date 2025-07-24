@@ -1,5 +1,5 @@
 name:
-Deploy to Alibaba ECS
+Deploy to Alibaba EC2
 on:
 push:
 branches:
@@ -16,7 +16,7 @@ with:
 ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 name: Deploy to EC2
 run: |
-ssh -o StrictHostKeyChecking=no ubuntu@ec2-54-253-162-171 << 'EOF'
+ssh -o StrictHostKeyChecking=no ubuntu@ec2-13-239-111-208 << 'EOF'
 cd /var/www/html/portfolio
 sudo git pull origin main
 # Restart Nginx or any other service if needed
