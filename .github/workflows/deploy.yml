@@ -20,7 +20,7 @@ jobs:
 
       - name: Deploy to EC2
         run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.ECS }} << 'EOF'
+          ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.ECS }}.ap-southeast-2.compute.amazonaws.com << 'EOF'
             cd /var/www/html/portfolio
             sudo git pull origin main
             sudo systemctl restart nginx
