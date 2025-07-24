@@ -14,7 +14,7 @@ name: Set up SSH
 uses: webfactory/ssh-agent@v0.5.3
 with:
 ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-name: Deploy to ECS
+name: Deploy to EC2
 run: |
 ssh -o StrictHostKeyChecking=no ubuntu@ec2-54-253-162-171 << 'EOF'
 cd /var/www/html/portfolio
